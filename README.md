@@ -22,7 +22,6 @@ Shortify is a simple URL shortener application that converts long, unwieldy URLs
 - **Shorten Long URLs**: Quickly convert long URLs into short, user-friendly URLs.
 - **Copy to Clipboard**: Easily copy the shortened URL with a single click.
 - **User-friendly UI**: A clean and responsive interface designed for simplicity.
-- **Error Handling**: Displays error messages for invalid URLs or if the shortening service fails.
 
 ---
 
@@ -59,9 +58,8 @@ You can see the live demo of Shortify [here](http://www.isheet.fun).
     Create a `.env` file in the root directory and add the following:
 
     ```bash
-    MONGODB_URI=mongodb://localhost:27017/shortify
-    BASE_URL=http://localhost:8000
-    PORT=8000
+    MONGODB_URI= your URI
+    PORT= your port number
     ```
 
 4. **Start the server**:
@@ -90,14 +88,10 @@ You can see the live demo of Shortify [here](http://www.isheet.fun).
 
 - **Frontend**:
   - HTML5, CSS3, JavaScript
-  - AJAX/Fetch API for asynchronous requests
 
 - **Backend**:
   - Node.js and Express.js for server-side logic
   - MongoDB as the database for storing URLs
-
-- **Additional Services**:
-  - AWS Route 53 for domain management (if applicable)
 
 ---
 
@@ -113,3 +107,9 @@ Shortify provides a simple API to shorten and retrieve URLs.
   {
     "longUrl": "https://your-long-url.com/some-path"
   }
+  - **Response**:
+  ```json
+  {
+    "longUrl": "https://base-name/hashcode"
+  }
+
