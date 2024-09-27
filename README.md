@@ -106,7 +106,7 @@ Shortify provides a simple API to shorten and retrieve URLs.
   {
     "longUrl": "https://your-long-url.com/some-path"
   }
-  - **Response**:
+- **Response**:
   ```json
   {
     "longUrl": "https://base-name/hashcode"
