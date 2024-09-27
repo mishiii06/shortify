@@ -1,0 +1,18 @@
+#Using Official Node:18 image 
+FROM node:18
+
+#Establishing the working directory
+WORKDIR /app
+
+#Copying packages
+COPY ./backend/package*.json ./
+
+# Installing dependencies
+RUN npm install
+
+COPY ./backend .
+
+EXPOSE 8000
+
+# Starting the application using npm start
+CMD ["npm", "start"]

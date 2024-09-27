@@ -1,0 +1,11 @@
+# Using the official Nginx image
+FROM nginx:latest
+
+# Copy frontend build files to the default Nginx directory
+COPY ./frontend /usr/share/nginx/html/
+
+# Expose the default Nginx HTTP port
+EXPOSE 80
+
+# Start Nginx server 
+CMD ["nginx", "-g", "daemon off;"]
