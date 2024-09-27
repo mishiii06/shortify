@@ -28,7 +28,7 @@ Shortify is a simple URL shortener application that converts long, unwieldy URLs
 
 ## Demo
 
-You can see the live demo of Shortify [here](http://your-live-demo-url).
+You can see the live demo of Shortify [here](http://www.isheet.fun).
 
 ---
 
