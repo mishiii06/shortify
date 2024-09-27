@@ -12,8 +12,6 @@ Shortify is a simple URL shortener application that converts long, unwieldy URLs
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
