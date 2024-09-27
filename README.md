@@ -1,6 +1,6 @@
 # Shortify - URL Shortener Application
 
-![Shortify Logo](./logo.png)
+![Shortify Logo](./frontend/logo.png)
 
 Shortify is a simple URL shortener application that converts long, unwieldy URLs into short and user-friendly links. It provides a clean, easy-to-use interface where users can input a long URL and receive a shortened version that can be easily shared or used elsewhere.
 
