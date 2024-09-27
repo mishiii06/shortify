@@ -38,9 +38,8 @@ router.post("/shorten", async (req, res) => {
         }
 
         const existingURL = await URLModel.findOne({ longUrl });
-
         if (existingURL && !urlCode) {
-            return res.json({ urlCode: existingURL.urlCode });
+            return res.json({ shortUrl: existingURL.shortUrl });
         }
 
         let generatedCode;
