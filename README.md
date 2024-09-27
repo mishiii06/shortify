@@ -36,7 +36,6 @@ You can see the live demo of Shortify [here](http://www.isheet.fun).
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v12 or higher)
 - [MongoDB](https://www.mongodb.com/) (or any other database you configure)
-- [AWS Route 53](https://aws.amazon.com/route53/) (for hosting your domain, optional)
 
 ### Step-by-step Setup
 
@@ -70,7 +69,7 @@ You can see the live demo of Shortify [here](http://www.isheet.fun).
 
 5. **Access the app**:
 
-    Open your browser and go to `http://localhost:8000`.
+    Open your browser and go to your URL:port_number. For Example: `http://localhost:8000`.
 
 ---
 
