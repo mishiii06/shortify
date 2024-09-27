@@ -1,63 +1,115 @@
+# Shortify - URL Shortener Application
 
-# Shortify - A URL Shortener App
+![Shortify Logo](./logo.png)
 
-## Description
-Shortify is a user-friendly web-based tool that allows users to create shortened versions of long URLs, making them easier to share. This project is built using MongoDB, Express, Node.js and styled with HTML, CSS and JavaScript for a visually appealing and responsive user interface.
+Shortify is a simple URL shortener application that converts long, unwieldy URLs into short and user-friendly links. It provides a clean, easy-to-use interface where users can input a long URL and receive a shortened version that can be easily shared or used elsewhere.
+
+## Table of Contents
+
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
 
 ## Features
-- Shorten URLs: Convert long URLs into shortened versions with a single click.
-- Custom Short URLs (Optional): Create personalized and memorable links for your URLs.
-- Copy to Clipboard: Copy the shortened URL to the clipboard for easy sharing.
-- User-friendly Interface: Intuitive and responsive UI design for a seamless user experience.
 
-## Live Demo
-Try out the live demo of the URL Shortener Web Application [here](http://www.isheet.fun).
+- **Shorten Long URLs**: Quickly convert long URLs into short, user-friendly URLs.
+- **Copy to Clipboard**: Easily copy the shortened URL with a single click.
+- **User-friendly UI**: A clean and responsive interface designed for simplicity.
+- **Error Handling**: Displays error messages for invalid URLs or if the shortening service fails.
+
+---
+
+## Demo
+
+You can see the live demo of Shortify [here](http://your-live-demo-url).
+
+---
 
 ## Installation
-To run the URL Shortener Web Application locally, follow these steps:
 
-1. Clone the repository:
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v12 or higher)
+- [MongoDB](https://www.mongodb.com/) (or any other database you configure)
+- [AWS Route 53](https://aws.amazon.com/route53/) (for hosting your domain, optional)
 
-2. Install dependencies backend:
-```npm install```
+### Step-by-step Setup
 
-4. Set up environment variables:
-- Create a `.env` file in the root directory and add the following:
-  ```
-  MONGODB_URI=your-mongodb-uri
-  PORT=your-port-number
-  ```
+1. **Clone the repository**:
 
-4. Start the development server:
+    ```bash
+    git clone https://github.com/mishiii06/shortify.git
+    cd shortify
+    ```
 
-  -Server ```npm start```
+2. **Install dependencies**:
 
-The URL Shortener Web Application will be running on `http://localhost:your-port-number`.
+    ```bash
+    npm install
+    ```
+
+3. **Configure environment variables**:
+
+    Create a `.env` file in the root directory and add the following:
+
+    ```bash
+    MONGODB_URI=mongodb://localhost:27017/shortify
+    BASE_URL=http://localhost:8000
+    PORT=8000
+    ```
+
+4. **Start the server**:
+
+    ```bash
+    npm start
+    ```
+
+5. **Access the app**:
+
+    Open your browser and go to `http://localhost:8000`.
+
+---
 
 ## Usage
-1. Access the application at `http://localhost:your-port-number` in your web browser.
-2. Enter the long URL you want to shorten in the input field.
-3. Optionally, you can provide a custom short URL code for the link.
-4. Click the "Shorten URL" button to generate the shortened version.
-5. The shortened URL will be displayed in the output field, and it will be automatically copied to your clipboard for easy sharing.
+
+### Shortening a URL
+
+1. Enter a long URL in the input field on the main page.
+2. Click **Shorten URL**.
+3. The shortened URL will appear in the input field, and a **Copy** button will be available to copy the URL to your clipboard.
+
+---
 
 ## Technologies Used
-- Frontend:
-- HTML
-- CSS
-- JavaScript
 
-- Backend:
-- Node.js
-- Express
-- MongoDB (via Mongoose)
+- **Frontend**:
+  - HTML5, CSS3, JavaScript
+  - AJAX/Fetch API for asynchronous requests
 
-## Deployment
-- Backend: Deployed using Kubernetes 
-- Frontend: Deployed using Kubernetes
+- **Backend**:
+  - Node.js and Express.js for server-side logic
+  - MongoDB as the database for storing URLs
 
-## Contributing
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please create a new issue or submit a pull request.
+- **Additional Services**:
+  - AWS Route 53 for domain management (if applicable)
 
-## Contact
-For any inquiries or questions, feel free to reach out via [email](mailto:akshaysinghr98@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/akshay-kumar046203/).
+---
+
+## API Endpoints
+
+Shortify provides a simple API to shorten and retrieve URLs.
+
+### `POST /api/url/shorten`
+
+- **Description**: Shortens a given long URL.
+- **Request**:
+  ```json
+  {
+    "longUrl": "https://your-long-url.com/some-path"
+  }
