@@ -11,7 +11,7 @@ Shortify is a user-friendly web-based tool that allows users to create shortened
 - User-friendly Interface: Intuitive and responsive UI design for a seamless user experience.
 
 ## Live Demo
-Try out the live demo of the URL Shortener Web Application [here](https://lightlink.vercel.app).
+Try out the live demo of the URL Shortener Web Application [here](http://www.isheet.fun).
 
 ## Installation
 To run the URL Shortener Web Application locally, follow these steps:
