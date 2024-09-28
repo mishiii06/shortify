@@ -107,6 +107,6 @@ Shortify provides a simple API to shorten and retrieve URLs.
 - **Response**:
   ```json
   {
-    "longUrl": "https://base-name/hashcode"
+    "shortUrl": "https://base-name/hashcode"
   }
 
