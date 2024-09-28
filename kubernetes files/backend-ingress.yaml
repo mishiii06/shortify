@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shortify-backend-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: url.shortify.site # Update with your desired hostname or use a dynamic hostname
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: shortify-backend-service  # Name of your shortify-backend Kubernetes service
+            port:
+              number: 8000          # Port on which your shortify-backend service is exposed
+

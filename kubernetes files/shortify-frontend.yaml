@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shortify-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shortify-frontend
+  template:
+    metadata:
+      labels:
+        app: shortify-frontend
+    spec:
+      containers:
+        - name: shortify-frontend
+          image: 241533151582.dkr.ecr.ap-south-1.amazonaws.com/global/shortify:frontend3  # Replace with your shortify-frontend image
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+      - name: ecr-secret

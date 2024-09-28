@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shortify-backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shortify-backend
+  template:
+    metadata:
+      labels:
+        app: shortify-backend
+    spec:
+      containers:
+      - name: shortify-backend
+        image: 241533151582.dkr.ecr.ap-south-1.amazonaws.com/global/shortify:backend  # Replace with your shortify-backend image
+        ports:
+        - containerPort: 8000
+        env:
+        - name: NODE_ENV
+          value: local
+        - name: BASEURI
+          value: http://url.shortify.site  # Change in BASEURI, to match shortify-backend ingress host
+        - name: PORT
+          value: "8000"
+      imagePullSecrets:
+      - name: ecr-secret
