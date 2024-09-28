@@ -7,14 +7,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: url.shortify.site # Update with your desired hostname or use a dynamic hostname
+  - host: url.shortify.site 
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: shortify-backend-service  # Name of your shortify-backend Kubernetes service
+            name: shortify-backend-service  
             port:
-              number: 8000          # Port on which your shortify-backend service is exposed
-
+              number: 8000          

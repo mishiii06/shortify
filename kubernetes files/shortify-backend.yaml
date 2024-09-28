@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
       - name: shortify-backend
-        image: 241533151582.dkr.ecr.ap-south-1.amazonaws.com/global/shortify:backend  # Replace with your shortify-backend image
+        image: 241533151582.dkr.ecr.ap-south-1.amazonaws.com/global/shortify:backend  
         ports:
         - containerPort: 8000
         env:
         - name: NODE_ENV
           value: local
         - name: BASEURI
-          value: http://url.shortify.site  # Change in BASEURI, to match shortify-backend ingress host
+          value: http://url.shortify.site 
         - name: PORT
           value: "8000"
       imagePullSecrets:
